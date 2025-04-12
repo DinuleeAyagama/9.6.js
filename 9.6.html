@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Days of the week.</title>
+</head>
+<body>
+    <p id="demo4"></p>
+    <script>
+        var day = prompt("Enter number of the Day (0-6 where 0 is Sunday):");
+        day = parseInt(day);
+        var text;
+        
+        switch (day) {
+            case 4:
+            case 5:
+                text = "Soon it is Weekend";
+                break;
+            case 0:
+            case 6:
+                text = "It is Weekend";
+                break;
+            default:
+                text = "Looking forward to the Weekend";
+        }
+        
+        //messages for each weekday
+        if (day >= 1 && day <= 5) {
+            var weekdayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            text += "<br>Today is " + weekdayNames[day] + " - " + text;
+        }
+        
+        document.getElementById("demo4").innerHTML = text;
+    </script>
+</body>
+</html>
